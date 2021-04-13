@@ -24,7 +24,7 @@
 
 
 		//send the email
-		mail("myemailaddress@mydomain.com", $Subject, $mail_body, $headers);
+		mail("mroberts@endicott.edu", $Subject, $mail_body, $headers);
 
 
 		//show thank you page
