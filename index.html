@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="This sentence will appear under the link in search engine results.">
+	<meta name="keywords" content="list,of,words,separated,by,commas,that,describe,your,site">
+	<meta name="author" content="Your name goes here">
+
+	<!-- viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- shiv which should be a shim -->
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<![endif]-->
+
+	<!-- tab title -->
+	<title>Join My Mailing List</title>
+
+	<!-- favicon link -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="styles/main.css">
+
+</head>
+
+
+<body>
+	<header class="clearfix">
+		<img src="images/logo.png" alt="Mailing List logo">
+		<h1>Join My Mailing List</h1>
+		<h2>Don't miss any updates - Join my mailing list today</h2>
+	</header>
+
+
+    <section>
+
+		<h2>Mailing List Signup</h2>
+
+
+		<form name="user_data" action="signup.php" method="get">
+			<h3>Your information:</h3>
+			<fieldset><legend>Fill All Fields</legend>
+			<label for="fullname">Your Name:</label>
+			<input type="text" name="fullname" id="fullname" required>
+			<label for="contactEmail">Your email address:</label>
+			<input type="email" name="contactEmail" id="contactEmail" required>
+			<label for="websiteAddress">Your website:</label>
+			<input type="url" name="websiteAddress" id="websiteAddress">
+			<label for="phone">Your phone number:</label>
+			<input type="tel" name="phone" id="phone">
+			<input type="submit" name="submit" value="SUBMIT">
+		</form>
+
+
+	</section>
+
+	<script>
+		window.onload = function() {
+			var d = new Date();
+			document.getElementById("copyright").innerHTML = d.getFullYear();
+		}
+	</script>
+
+	<footer>
+		<p>&copy; <span id="copyright"></span> Michael Roberts Productions</p>
+	</footer>
+
+</body>
+</html>
