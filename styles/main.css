@@ -15,9 +15,9 @@ html {
 body {
 	font-family: calibri, Helvetica, sans-serif;
 	font-size: 100%;
-	width: 99%;
+	width: 100%;
 	max-width: 960px;
-	margin: 10px auto;
+	margin: 0 auto;
 	border: 3px solid midnightblue;
 	background-color: white;
 	border-radius: 10px;
@@ -100,9 +100,7 @@ form fieldset {
 form fieldset legend {
 	padding: .25em;
 }
-form label {	
-	clear: both;
-	display: inline-block;
+form label {
 	float: left;
 	width: 30%;
 	text-align: right;
@@ -120,7 +118,14 @@ form input[type=submit] {
 	float: right;
 	margin-bottom: 1em;
 }
-
+#thankspage h4 {
+	font-size: large;
+	font-weight: bold;
+	color: blue;
+	line-height: 1.5;
+	margin: 10px;
+	text-align: center;
+}
 /* the styles for the footer */
 footer {
 	clear: both;
@@ -138,7 +143,48 @@ footer p {
 
 /* mobile landscape to tablet portrait */
 @media only screen and (max-width: 767px) {
-	header img { float: none; }
+	body {
+		border: none;
+		border-radius: 0%;
+		box-shadow: none;
+	}
+	header, footer { border-radius: 0%;}
+	header img { 
+		float: none;
+		max-width: 100px;
+		min-width: 35px;
+	}
 	header { text-align: center; }
+	section {
+		width: 100%;
+		margin: 0 auto;
+	}
+	form {
+		width: 75%;
+		margin: 0 auto;
+	}
+	form label {
+		display: inline;
+		float: none;
+		text-align: left;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	form input {
+		margin-bottom: 1em;
+		
+	}
+	form fieldset {
+		padding: 0;
+		border: none;
+		border-radius: 0;
+	}
+	form input[type=submit] {
+		float: left;
+	}
+	form fieldset legend {
+		padding: 0;
+		display: none;
+	}
 }
 

@@ -1,32 +1,35 @@
 <?php
 
 		//mail variables
-		$fullName = $_REQUEST['fullName'];
+		$full_Name = $_REQUEST['full_Name'];
 		$websiteAddress = $_REQUEST['websiteAddress'];
-		$contact_email = $_REQUEST['contactEmail'];
+		$contactEmail = $_REQUEST['contactEmail'];
 		$phone = $_REQUEST['phone'];
 
 		//email send information
 
-		$Subject = "New Email List Submission";
+		$subject = "New Email List Submission";
 
 		//email headers
-		$headers = "From: ".$fullName." <".$contactEmail.">\r\n";
+		$headers = "From: ".$full_Name." <".$contactEmail.">\r\n";
 
 		//email body
-		$mail_body = "
+		$mailBody = "
 
-		Name: ".$fullName."
+		Name: ".$full_Name."
 		Website: ".$websiteAddress."
 		Phone: ".$phone."
 		Email: ".$contactEmail;
 
+		//send to
+		$mailTo = "mroberts@endicott.edu";
+
 
 
 		//send the email
-		mail("mroberts@endicott.edu", $Subject, $mail_body, $headers);
-
-
+		mail($mailTo, $subject, $mailBody, $headers);
+        
+      
 		//show thank you page
 		print "<META http-equiv='REFRESH' content='0;URL=thanks.html'>";
 
